@@ -1,0 +1,68 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             x:Class="Drakon.App.Views.Containers.CanvasControl"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="SchemeRenderControl">
+    <StackPanel x:Name="CanvasRoot">
+
+        <StackPanel.Resources>
+            <DrawingBrush x:Key="MyGridBrushResource" Viewport="0,0,10,10" ViewportUnits="Absolute" TileMode="Tile">
+                <DrawingBrush.Drawing>
+                    <DrawingGroup>
+                        <GeometryDrawing Brush="White">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry Rect="0,0,1,1" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="M0,0 L1,0 1,0.1, 0,0.1Z" Brush="#A5A5A5" />
+                        <GeometryDrawing Geometry="M0,0 L0,1 0.1,1, 0.1,0Z" Brush="#A5A5A5" />
+                    </DrawingGroup>
+                </DrawingBrush.Drawing>
+            </DrawingBrush>
+
+            <Style x:Key="MyGridBorderStyle">
+                <Setter Property="Border.Background" Value="{StaticResource MyGridBrushResource}"/>
+                <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+                <Setter Property="FrameworkElement.VerticalAlignment" Value="Top"/>
+                <Setter Property="Border.BorderBrush" Value="Black"/>
+                <Setter Property="Border.BorderThickness" Value="1"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <StackPanel>
+            <StackPanel.ContextMenu>
+                <xcad:ContextMenuEx>
+                    <MenuItem Header="Place here..." />
+                    <MenuItem Header="Remove" />
+                    <MenuItem Header="Rotate 90 at right" />
+                </xcad:ContextMenuEx>
+            </StackPanel.ContextMenu>
+
+            <Border Style="{StaticResource MyGridBorderStyle}">
+                <Canvas x:Name="SchemeCanvas" 
+                        Width="{Binding ActualWidth, ElementName=CanvasRoot}" 
+                        Height="{Binding ActualHeight, ElementName=CanvasRoot}"
+                        Background="Transparent"
+                        MouseDown="SchemeCanvas_OnMouseDown"
+                        MouseMove="SchemeCanvas_OnMouseMove"
+                        LayoutUpdated="SchemeCanvas_OnLayoutUpdated">
+
+                    <Canvas.ContextMenu>
+                        <ContextMenu Name="CanvasContextMenu" Visibility="Visible" >
+                            <!-- TODO: Define context menu items here -->
+                        </ContextMenu>
+                    </Canvas.ContextMenu>
+
+                </Canvas>
+            </Border>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
