@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 You will need to install this features on your pc before getting started:
-	[*] VS2019 BuildTools
-	[*] .NET Core 3.1
+	1. VS2019 BuildTools
+	2. .NET Core 3.1
 
 ## Other...
 
