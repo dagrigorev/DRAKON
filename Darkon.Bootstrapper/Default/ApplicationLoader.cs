@@ -6,9 +6,11 @@ using Drakon.Core.Default.Editor;
 using Drakon.Core.Default.Factories;
 using Drakon.Core.Default.Logger;
 using Drakon.Core.Default.Producers;
+using Drakon.Core.Default.Renderers;
 using Drakon.Core.Editor;
 using Drakon.Core.Factories;
 using Drakon.Core.Logger;
+using Drakon.Core.Renderers;
 using Drakon.Core.Tools;
 using Prism.Ioc;
 
@@ -41,6 +43,14 @@ namespace Drakon.Bootstrapper
                 _container.RegisterInstance(typeof(IToolsFactory), toolsFactory);
                 _container.RegisterInstance(typeof(IToolsCollection), toolsFactory.CreateDefaultToolsCollection());
 
+                _container.RegisterInstance(typeof(IRenderer[]), new IRenderer[]
+                {
+                    new DefaultRenderer()
+                    // TODO: Add other renderers here
+                });
+                _container.RegisterInstance(typeof(IRenderManager),
+                    new RenderManager(_container as IContainerProvider));
+                
                 ResolvableContainer = _container as IContainerProvider;
             }
             catch(Exception ex)

@@ -6,10 +6,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Drakon.App.Input;
+using Drakon.App.Renderers;
 using Drakon.App.Views.Containers;
 using Drakon.Core.Containers;
+using Drakon.Core.Renderers;
 using Prism.Commands;
 using Prism.Mvvm;
 
@@ -20,13 +23,37 @@ namespace Drakon.App.ViewModels
     /// </summary>
     public class CanvasControlViewModel : BindableBase
     {
+        /// <summary>
+        /// Default canvas size
+        /// </summary>
+        public readonly Size DefaultCanvasSize = new Size(2048, 1080);
+
         private object _parent;
-        private IDocumentContainer _selectedDocument;
+        private IProjectContainer _currentProject;
         private ICommand _mouseDownCommand;
         private ICommand _mouseMoveCommand;
         private Point _mousePosition;
         private ICommand _renderCommand;
-        private Canvas _renderCanvas;
+        private IImageRenderer _imageRenderer;
+        private ImageSource _imageSource;
+
+        /// <summary>
+        /// Current frame
+        /// </summary>
+        public ImageSource Frame
+        {
+            get => _imageSource;
+            set => SetProperty(ref _imageSource, value);
+        }
+
+        /// <summary>
+        /// Renderer instance
+        /// </summary>
+        public IImageRenderer Renderer
+        {
+            get => _imageRenderer;
+            set => SetProperty(ref _imageRenderer, value);
+        }
 
         /// <summary>
         /// Parent object
@@ -42,7 +69,7 @@ namespace Drakon.App.ViewModels
         /// </summary>
         public Point MousePosition
         {
-            get => _mousePosition; 
+            get => _mousePosition;
             set => SetProperty(ref _mousePosition, value);
         }
 
@@ -58,30 +85,39 @@ namespace Drakon.App.ViewModels
             set => SetProperty(ref _mouseMoveCommand, value);
         }
 
-        public ICommand RenderCommand
+        public IProjectContainer CurrentProject
         {
-            get => _renderCommand;
-            set => SetProperty(ref _renderCommand, value);
+            get => _currentProject;
+            set => SetProperty(ref _currentProject, value);
         }
 
-        public IDocumentContainer SelectedDocument
-        {
-            get => _selectedDocument;
-            set => SetProperty(ref _selectedDocument, value);
-        }
-
-        public Canvas RenderCanvas
-        {
-            get => _renderCanvas;
-            set => SetProperty(ref _renderCanvas, value);
-        }
-
+        /// <summary>
+        /// Default constructors. Calls by prism view model locator.
+        /// </summary>
         public CanvasControlViewModel()
         {
-            _selectedDocument = null;
+            _currentProject = null;
             MouseDownCommand = new DelegateCommand<InputArgs>(HandleCanvasMouseDown);
             MouseMoveCommand = new DelegateCommand<InputArgs>(HandleCanvasMouseMove);
-            RenderCommand = new DelegateCommand<Canvas>(HandleCanvasRender);
+            Renderer = new SkiaImageRenderer();
+
+            Frame = Renderer.CreateImage((int)DefaultCanvasSize.Width, (int)DefaultCanvasSize.Height);
+            CompositionTarget.Rendering += (o, e) => Renderer.UpdateImage(Frame as WriteableBitmap);
+        }
+
+        /// <summary>
+        /// Register renderer is sequence
+        /// </summary>
+        /// <param name="renderer"></param>
+        public void RegisterRenderer(IRenderer renderer)
+        {
+            _imageRenderer.AddRenderAction(canvas =>
+            {
+                if (renderer.Enabled)
+                {
+                    renderer.Render(_imageRenderer.Canvas, CurrentProject);
+                }
+            });
         }
 
         private void HandleCanvasMouseDown(InputArgs args)
@@ -90,17 +126,6 @@ namespace Drakon.App.ViewModels
             {
                 //Debug.WriteLine($"Clicked to {args.MousePosition}");
                 // TODO: Pass commands to model
-
-                control.SchemeCanvas.Children.Add(new Ellipse()
-                {
-                    Stroke = Brushes.Black,
-                    Fill = Brushes.DarkBlue,
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Center,
-                    StrokeThickness = 5,
-                    Width = 50,
-                    Height = 75
-                });
             }
         }
 
@@ -112,22 +137,6 @@ namespace Drakon.App.ViewModels
                 // TODO: Pass commands to model
                 MousePosition = args.MousePosition;
             }
-        }
-
-        private void HandleCanvasRender(Canvas canvas)
-        {
-            Debug.WriteLine("Redraw called");
-
-            canvas.Children.Add(new Ellipse()
-            {
-                Stroke = Brushes.Black,
-                Fill = Brushes.DarkBlue,
-                HorizontalAlignment = HorizontalAlignment.Left,
-                VerticalAlignment = VerticalAlignment.Center,
-                Width = 50,
-                Height = 75,
-                Clip = new EllipseGeometry(new Point(200, 200), 100, 100)
-            });
         }
     }
 }

@@ -11,6 +11,8 @@ namespace Drakon.Core.Editor
     public interface IProjectManager
     {
         event Action<object, IDocumentContainer> OnDocumentSelected;
+        event Action<object, IProjectContainer> OnProjectLoaded;
+        event Action<object, IProjectContainer> OnProjectClosed;
 
         /// <summary>
         /// Current project path

@@ -17,11 +17,15 @@ namespace Drakon.Core.Default.Editor
         private bool _isProjectSaved;
         private IProjectWriter _writer;
         private IProjectContainer _currentProject;
-        
-        /// <summary>
-        /// Document selection changing event
-        /// </summary>
+
+        /// <inhertidoc />
         public event Action<object, IDocumentContainer> OnDocumentSelected;
+
+        /// <inhertidoc />
+        public event Action<object, IProjectContainer> OnProjectLoaded;
+
+        /// <inhertidoc />
+        public event Action<object, IProjectContainer> OnProjectClosed;
 
         /// <summary>
         /// Project directory

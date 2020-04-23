@@ -65,10 +65,6 @@ namespace Drakon.App.Views.Containers
             }
         }
 
-        private void InvokeRenderCommand(Canvas canvas)
-        {
-        }
-
         /// <summary>
         /// Handles mouse down event in canvas.
         /// </summary>
@@ -82,11 +78,6 @@ namespace Drakon.App.Views.Containers
         private void SchemeCanvas_OnMouseMove(object sender, MouseEventArgs e)
         {
             InvokeMouseMoveCommad(e);
-        }
-
-        private void SchemeCanvas_OnLayoutUpdated(object? sender, EventArgs e)
-        {
-            InvokeRenderCommand(SchemeCanvas);
         }
     }
 }

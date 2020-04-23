@@ -10,9 +10,25 @@ namespace Drakon.Core.Renderers
     public interface IRenderer : IObservable
     {
         /// <summary>
+        /// Main render method
+        /// </summary>
+        /// <param name="obj"></param>
+        void Render(object canvas, IObservable obj);
+
+        /// <summary>
         /// Renders point shape
         /// </summary>
         /// <param name="shape"></param>
         void Render(IPointShape shape);
+
+        /// <summary>
+        /// Enables or disables renderer in scene rendering sequence
+        /// </summary>
+        bool Enabled { get; set; }
+
+        /// <summary>
+        /// Initializes renderer
+        /// </summary>
+        void Initialize();
     }
 }

@@ -40,7 +40,17 @@ namespace Drakon.App.ViewModels
 
         private CanvasControlViewModel CreateCanvasControlViewModel()
         {
-            return new CanvasControlViewModel();
+            var canvasControlVm = new CanvasControlViewModel();
+            foreach (var renderer in _containerProvider.Resolve<IRenderManager>().GetRenderers())
+                canvasControlVm.RegisterRenderer(renderer);
+            
+            // TODO: Replace this by something better
+            _containerProvider.Resolve<IEditorSkeleton>().ProjectManager.OnProjectLoaded += (o, container) =>
+            {
+                canvasControlVm.CurrentProject = container;
+            };
+
+            return canvasControlVm;
         }
 
         private OptionsControlViewModel CreateOptionsControlViewModel()

@@ -22,6 +22,11 @@ namespace Drakon.Core.Editor
         IProjectManager ProjectManager { get; set; }
 
         /// <summary>
+        /// Graphics, projects and other render manager
+        /// </summary>
+        IRenderManager RenderManager { get; set; }
+
+        /// <summary>
         /// Editor logger
         /// </summary>
         ILogger Logger { get; set; }

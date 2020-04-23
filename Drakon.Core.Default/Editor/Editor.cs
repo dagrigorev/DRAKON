@@ -19,7 +19,7 @@ namespace Drakon.Core.Default.Editor
         private IEditorOptions _options;
         private IProjectManager _projectManager;
         private IToolsCollection _tools;
-
+        private IRenderManager _renderManager;
         private IToolsFactory _toolsFactory;
 
         public IEditorOptions Options
@@ -34,6 +34,14 @@ namespace Drakon.Core.Default.Editor
             set => SetProperty(ref _projectManager, value);
         }
 
+        /// <inheritdoc />
+        public IRenderManager RenderManager
+        {
+            get => _renderManager; 
+            set => SetProperty(ref _renderManager, value);
+        }
+
+        /// <inheritdoc />
         public ILogger Logger
         {
             get => _logger;
