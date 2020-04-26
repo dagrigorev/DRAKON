@@ -9,3 +9,4 @@ C:\Users\dm-gr\source\repos\Drakon\Drakon.Core\obj\Debug\netcoreapp3.1\Drakon.Co
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core\bin\Debug\netcoreapp3.1\Drakon.Core.Base.dll
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core\bin\Debug\netcoreapp3.1\Drakon.Core.Base.pdb
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core\obj\Debug\netcoreapp3.1\Drakon.Core.csproj.CopyComplete
+C:\Users\dm-gr\source\repos\Drakon\Drakon.Core\obj\Debug\netcoreapp3.1\Drakon.Core.csproj.CoreCompileInputs.cache

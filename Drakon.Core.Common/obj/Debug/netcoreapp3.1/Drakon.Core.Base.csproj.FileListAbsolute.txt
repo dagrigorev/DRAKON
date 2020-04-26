@@ -1,7 +1,6 @@
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core.Common\bin\Debug\netcoreapp3.1\Drakon.Core.Base.deps.json
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core.Common\bin\Debug\netcoreapp3.1\Drakon.Core.Base.dll
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core.Common\bin\Debug\netcoreapp3.1\Drakon.Core.Base.pdb
-C:\Users\dm-gr\source\repos\Drakon\Drakon.Core.Common\obj\Debug\netcoreapp3.1\Drakon.Core.Base.csprojAssemblyReference.cache
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core.Common\obj\Debug\netcoreapp3.1\Drakon.Core.Base.csproj.CoreCompileInputs.cache
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core.Common\obj\Debug\netcoreapp3.1\Drakon.Core.Base.AssemblyInfoInputs.cache
 C:\Users\dm-gr\source\repos\Drakon\Drakon.Core.Common\obj\Debug\netcoreapp3.1\Drakon.Core.Base.AssemblyInfo.cs

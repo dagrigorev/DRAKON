@@ -33,6 +33,7 @@ namespace Drakon.Bootstrapper
                 _container.RegisterInstance(typeof(ILogger), new Logger());
                 _container.RegisterInstance(typeof(IEditorOptions), new EditorOptions());
                 _container.RegisterInstance(typeof(IEditorSkeleton), new Editor());
+                _container.RegisterInstance(typeof(IProjectManager), new ProjectManager());
 
                 var shapeFactory = new ShapeFactory();
                 var codeFactory = new CodePrimitiveFactory();

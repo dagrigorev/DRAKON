@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Drakon.App/1.0.0": {
         "dependencies": {
+          "Drakon.App.ViewModels": "1.0.0",
           "Drakon.Bootstrapper": "1.0.0",
           "Drakon.Core": "1.0.0",
           "Extended.Wpf.Toolkit": "2.9.0",
@@ -214,6 +215,17 @@
           }
         }
       },
+      "Drakon.App.ViewModels/1.0.0": {
+        "dependencies": {
+          "Drakon.Core": "1.0.0",
+          "Drakon.Core.Base": "1.0.0",
+          "Prism.Core": "7.2.0.1422",
+          "SkiaSharp": "1.68.1.1"
+        },
+        "runtime": {
+          "Drakon.App.ViewModels.dll": {}
+        }
+      },
       "Drakon.Bootstrapper/1.0.0": {
         "dependencies": {
           "Drakon.Core": "1.0.0",
@@ -353,6 +365,11 @@
       "sha512": "sha512-pxeataMa9MB/ilLNcmy5OUrcvA2OnPMuMCTsw+zGgRPWx1oxkq6ap5bI+59htjAPe9awPDIU3YVk+yH0sfcOWQ==",
       "path": "unity.container/5.11.1",
       "hashPath": "unity.container.5.11.1.nupkg.sha512"
+    },
+    "Drakon.App.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Drakon.Bootstrapper/1.0.0": {
       "type": "project",

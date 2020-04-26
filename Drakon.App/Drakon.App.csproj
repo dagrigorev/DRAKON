@@ -16,10 +16,8 @@
     <PackageReference Include="SkiaSharp.Views.WPF" Version="1.68.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Darkon.Bootstrapper\Drakon.Bootstrapper.csproj" />
+    <ProjectReference Include="..\Drakon.App.ViewModels\Drakon.App.ViewModels.csproj" />
     <ProjectReference Include="..\Drakon.Core\Drakon.Core.csproj" />
   </ItemGroup>
 </Project>

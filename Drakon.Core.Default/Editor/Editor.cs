@@ -63,6 +63,7 @@ namespace Drakon.Core.Default.Editor
 
                 _toolsFactory = container.Resolve<IToolsFactory>();
                 Tools = _toolsFactory.CreateDefaultToolsCollection();
+                ProjectManager = container.Resolve<IProjectManager>();
             } 
             else 
                 throw new NullReferenceException("Container cannot be null");

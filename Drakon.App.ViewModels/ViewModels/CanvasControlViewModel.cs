@@ -10,7 +10,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Drakon.App.Input;
 using Drakon.App.Renderers;
-using Drakon.App.Views.Containers;
 using Drakon.Core.Containers;
 using Drakon.Core.Renderers;
 using Prism.Commands;
@@ -122,7 +121,7 @@ namespace Drakon.App.ViewModels
 
         private void HandleCanvasMouseDown(InputArgs args)
         {
-            if (args != null && Parent is CanvasControl control)
+            if (args != null && Parent is UserControl control)
             {
                 //Debug.WriteLine($"Clicked to {args.MousePosition}");
                 // TODO: Pass commands to model

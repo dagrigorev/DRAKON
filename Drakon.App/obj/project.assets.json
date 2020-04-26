@@ -213,6 +213,25 @@
           "lib/netcoreapp2.0/Unity.Container.dll": {}
         }
       },
+      "Drakon.App.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Drakon.Core": "1.0.0",
+          "Drakon.Core.Base": "1.0.0",
+          "Prism.Core": "7.2.0.1422",
+          "SkiaSharp": "1.68.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Drakon.App.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Drakon.App.ViewModels.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "Drakon.Bootstrapper/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -603,6 +622,11 @@
         "unity.container.nuspec"
       ]
     },
+    "Drakon.App.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../Drakon.App.ViewModels/Drakon.App.ViewModels.csproj",
+      "msbuildProject": "../Drakon.App.ViewModels/Drakon.App.ViewModels.csproj"
+    },
     "Drakon.Bootstrapper/1.0.0": {
       "type": "project",
       "path": "../Darkon.Bootstrapper/Drakon.Bootstrapper.csproj",
@@ -631,6 +655,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Drakon.App.ViewModels >= 1.0.0",
       "Drakon.Bootstrapper >= 1.0.0",
       "Drakon.Core >= 1.0.0",
       "Extended.Wpf.Toolkit >= 2.9.0",
@@ -667,6 +692,9 @@
           "projectReferences": {
             "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Darkon.Bootstrapper\\Drakon.Bootstrapper.csproj": {
               "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Darkon.Bootstrapper\\Drakon.Bootstrapper.csproj"
+            },
+            "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\Drakon.App.ViewModels.csproj": {
+              "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\Drakon.App.ViewModels.csproj"
             },
             "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core\\Drakon.Core.csproj": {
               "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core\\Drakon.Core.csproj"

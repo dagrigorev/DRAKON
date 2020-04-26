@@ -69,6 +69,78 @@
         }
       }
     },
+    "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\Drakon.App.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\Drakon.App.ViewModels.csproj",
+        "projectName": "Drakon.App.ViewModels",
+        "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\Drakon.App.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\dm-gr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dm-gr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core.Common\\Drakon.Core.Base.csproj": {
+                "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core.Common\\Drakon.Core.Base.csproj"
+              },
+              "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core\\Drakon.Core.csproj": {
+                "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core\\Drakon.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[7.2.0.1422, )"
+            },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[1.68.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App\\Drakon.App.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -94,6 +166,9 @@
             "projectReferences": {
               "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Darkon.Bootstrapper\\Drakon.Bootstrapper.csproj": {
                 "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Darkon.Bootstrapper\\Drakon.Bootstrapper.csproj"
+              },
+              "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\Drakon.App.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.App.ViewModels\\Drakon.App.ViewModels.csproj"
               },
               "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core\\Drakon.Core.csproj": {
                 "projectPath": "C:\\Users\\dm-gr\\source\\repos\\Drakon\\Drakon.Core\\Drakon.Core.csproj"

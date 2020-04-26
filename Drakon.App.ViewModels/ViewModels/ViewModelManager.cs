@@ -45,7 +45,7 @@ namespace Drakon.App.ViewModels
                 canvasControlVm.RegisterRenderer(renderer);
             
             // TODO: Replace this by something better
-            _containerProvider.Resolve<IEditorSkeleton>().ProjectManager.OnProjectLoaded += (o, container) =>
+            _containerProvider.Resolve<IProjectManager>().OnProjectLoaded += (o, container) =>
             {
                 canvasControlVm.CurrentProject = container;
             };

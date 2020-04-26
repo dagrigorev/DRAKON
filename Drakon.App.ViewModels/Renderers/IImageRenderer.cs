@@ -31,7 +31,7 @@ namespace Drakon.App.Renderers
       /// <param name="width">Image width</param>
       /// <param name="height">Image height</param>
       /// <returns></returns>
-        WriteableBitmap CreateImage(int width, int height);
+      WriteableBitmap CreateImage(int width, int height);
 
       /// <summary>
       /// Updates writeable image

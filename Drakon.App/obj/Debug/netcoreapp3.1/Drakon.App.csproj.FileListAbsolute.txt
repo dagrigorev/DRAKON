@@ -67,3 +67,5 @@ C:\Users\dm-gr\source\repos\Drakon\Drakon.App\obj\Debug\netcoreapp3.1\Views\Cont
 C:\Users\dm-gr\source\repos\Drakon\Drakon.App\obj\Debug\netcoreapp3.1\Views\Containers\ToolsControl.baml
 C:\Users\dm-gr\source\repos\Drakon\Drakon.App\bin\Debug\netcoreapp3.1\Drakon.Core.Base.dll
 C:\Users\dm-gr\source\repos\Drakon\Drakon.App\bin\Debug\netcoreapp3.1\Drakon.Core.Base.pdb
+C:\Users\dm-gr\source\repos\Drakon\Drakon.App\bin\Debug\netcoreapp3.1\Drakon.App.ViewModels.dll
+C:\Users\dm-gr\source\repos\Drakon\Drakon.App\bin\Debug\netcoreapp3.1\Drakon.App.ViewModels.pdb
