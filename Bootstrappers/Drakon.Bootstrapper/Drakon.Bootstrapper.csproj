@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Domain\Drakon.Domain.Base\Drakon.Domain.Base.csproj" />
-    <ProjectReference Include="..\..\Domain\Drakon.Domain.ProjectServices\Drakon.Domain.ProjectServices.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Drakon.Infrastructure.ProjectServices\Drakon.Infrastructure.ProjectServices.csproj" />
   </ItemGroup>
 
 </Project>

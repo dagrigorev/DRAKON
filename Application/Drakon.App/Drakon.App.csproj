@@ -7,4 +7,8 @@
     <PackageReference Include="Avalonia" Version="0.9.12" />
     <PackageReference Include="Avalonia.Desktop" Version="0.9.12" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bootstrappers\Drakon.Bootstrapper\Drakon.Bootstrapper.csproj" />
+    <ProjectReference Include="..\Drakon.App.ViewModels\Drakon.App.ViewModels.csproj" />
+  </ItemGroup>
 </Project>

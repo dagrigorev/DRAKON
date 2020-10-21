@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\Drakon.Domain.Base\Drakon.Domain.Base.csproj" />
     <ProjectReference Include="..\..\Domain\Drakon.Domain.ProjectServices\Drakon.Domain.ProjectServices.csproj" />
   </ItemGroup>
 
