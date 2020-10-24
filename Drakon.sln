@@ -23,15 +23,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drakon.App.ViewModels", "Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Drakon.App.ViewModels", "Tests\Application\Tests.Drakon.App.ViewModels\Tests.Drakon.App.ViewModels.csproj", "{247D7AB7-F4A0-4F07-BAE6-48A58FFCEA37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drakon.Domain.ProjectServices", "Domain\Drakon.Domain.ProjectServices\Drakon.Domain.ProjectServices.csproj", "{9DC172A9-CFAF-486D-B590-ED752795FB13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drakon.Domain.ProjectServices", "Domain\Drakon.Domain.ProjectServices\Drakon.Domain.ProjectServices.csproj", "{9DC172A9-CFAF-486D-B590-ED752795FB13}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstrappers", "Bootstrappers", "{2A4598C2-69CA-4A43-885F-985BED5AF7B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drakon.Bootstrapper", "Bootstrappers\Drakon.Bootstrapper\Drakon.Bootstrapper.csproj", "{394AD32D-59F6-408D-ADC1-2C6B1EC7EF86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drakon.Bootstrapper", "Bootstrappers\Drakon.Bootstrapper\Drakon.Bootstrapper.csproj", "{394AD32D-59F6-408D-ADC1-2C6B1EC7EF86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drakon.Infrastructure.ProjectServices", "Infrastructure\Drakon.Infrastructure.ProjectServices\Drakon.Infrastructure.ProjectServices.csproj", "{EF87A65C-AABD-4F9B-BCDE-4E23D11054D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drakon.Infrastructure.ProjectServices", "Infrastructure\Drakon.Infrastructure.ProjectServices\Drakon.Infrastructure.ProjectServices.csproj", "{EF87A65C-AABD-4F9B-BCDE-4E23D11054D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drakon.Domain.Base", "Domain\Drakon.Domain.Base\Drakon.Domain.Base.csproj", "{F4014D35-6D11-44B4-8DF2-1301AEC7B3A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drakon.Domain.Base", "Domain\Drakon.Domain.Base\Drakon.Domain.Base.csproj", "{F4014D35-6D11-44B4-8DF2-1301AEC7B3A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9CAE6685-9BB9-4F53-93E1-3CE7F012B456}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drakon.Data", "Data\Drakon.Data\Drakon.Data.csproj", "{7060A303-0D98-434E-A9A7-F177DA6A1982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drakon.Domain.RenderServices", "Domain\Drakon.Domain.RenderServices\Drakon.Domain.RenderServices.csproj", "{4F46D209-5418-4EA8-A161-66F2ECAF8B75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +73,14 @@ Global
 		{F4014D35-6D11-44B4-8DF2-1301AEC7B3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4014D35-6D11-44B4-8DF2-1301AEC7B3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4014D35-6D11-44B4-8DF2-1301AEC7B3A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7060A303-0D98-434E-A9A7-F177DA6A1982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7060A303-0D98-434E-A9A7-F177DA6A1982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7060A303-0D98-434E-A9A7-F177DA6A1982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7060A303-0D98-434E-A9A7-F177DA6A1982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F46D209-5418-4EA8-A161-66F2ECAF8B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F46D209-5418-4EA8-A161-66F2ECAF8B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F46D209-5418-4EA8-A161-66F2ECAF8B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F46D209-5418-4EA8-A161-66F2ECAF8B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +96,8 @@ Global
 		{394AD32D-59F6-408D-ADC1-2C6B1EC7EF86} = {2A4598C2-69CA-4A43-885F-985BED5AF7B8}
 		{EF87A65C-AABD-4F9B-BCDE-4E23D11054D3} = {BCD111B0-02E0-4637-9E18-ED934E4F5D54}
 		{F4014D35-6D11-44B4-8DF2-1301AEC7B3A0} = {9939350E-F273-45D3-8A10-67464F3C598D}
+		{7060A303-0D98-434E-A9A7-F177DA6A1982} = {9CAE6685-9BB9-4F53-93E1-3CE7F012B456}
+		{4F46D209-5418-4EA8-A161-66F2ECAF8B75} = {9939350E-F273-45D3-8A10-67464F3C598D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB233E6F-96F2-46CE-A965-8253B99D83A0}

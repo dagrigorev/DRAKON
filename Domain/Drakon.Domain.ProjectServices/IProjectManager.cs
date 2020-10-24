@@ -1,10 +1,17 @@
-﻿namespace Drakon.Domain.ProjectServices
+﻿using Drakon.Data.Project;
+
+namespace Drakon.Domain.ProjectServices
 {
     /// <summary>
     /// Drakon project manager definition.
     /// </summary>
     public interface IProjectManager
     {
+        /// <summary>
+        /// Enables project observing.
+        /// </summary>
+        bool EnableObserver { get; set; }
+
         /// <summary>
         /// Current active project instance.
         /// </summary>
